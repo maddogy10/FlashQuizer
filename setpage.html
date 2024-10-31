@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flashcard Set</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id="bodypart">
+    <div class="navbar">
+        <div class="firstnav">
+        <a href="" id="navImg"><img src="IMG_1144.PNG" alt="FlashQuiz Logo"></a>
+        <a id="create-set" href="createset.html"><div>Create a set</div></a>
+        <a id="mysets">My Sets</a>
+        
+
+    </div>
+
+    <a id="searchbar"><input type="" placeholder=" Search"></input></a>
+
+        <div id="navProf" class="dropdown">
+            
+            <button onclick="location.href='https://google.com'" class="dropbtn" type="button" id="sign-in"><!--<img src="IMG_1144.PNG" alt="FlashQuiz Logo">-->Sign In</button>
+            <div class="dropdown-content">
+                <a href="#">Profile</a>
+                <a href="#">Settings</a>
+                <a href="#">Logout</a>
+            </div>
+        </div>
+
+</div>
+<div id="mainBody">
+    <h1 id="setTitle"></h1>
+    <div id="flashcards" style="height: 300px; margin-top: 30px;" >
+        
+        <div class="cardcontainer" id="cardcontainer" style="margin-top: 60px;">
+     <!--   <div class="card fade" >
+            <div class="front" ><h2 class="termText">Hi</h2></div>
+            <div class="back"><h2 class="definitionText">llo</h2></div>
+        </div>
+        <div class="card fade" >
+            <div class="front" ><h2 class="termText">bye</h2></div>
+            <div class="back"><h2 class="definitionText">bo</h2></div>
+        </div>-->
+    </div>
+    <a class="prev" id="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" id="next" onclick="plusSlides(1)">&#10095;</a>
+   
+
+    </div>
+    <div class="games">
+    <button onclick="writeMode(); termWrite();" id="writeButton">Write</button>
+        <button id="wordSearch" onclick="wordSearchMode();">Word Search</button>
+    </div>
+    <div id="writeModal">
+        <h1>Learn Mode</h1>
+        <h2 id="writeModalx" onclick="closeWriteMode()">x</h2>
+        <div id="combowrite">
+        <div id="writeleft">
+            <h2>Write</h2>
+            <div id="remaining">
+                <div id="rembar" class="writebar">
+                    <div id="remleft" class="barleft" style="background-color: blue;"></div>
+                </div>
+                <div id="rembartext" class="wrletxt" >
+                <h4>REMAINING</h4>
+                <h4 id="remainingNum">0</h4>
+            </div>
+            </div>
+            <div id="incorrect">
+                <div id="incbar" class="writebar">
+                    <div id="incleft" class="barleft" style="background-color: red; width: 0;"></div>
+                </div>
+                <div id="inctext" class="wrletxt">
+                    <h4>INCORRECT</h4>
+                    <h4 id="incorrectNum">0</h4>
+            </div>
+            </div>
+            <div id="correct">
+                <div id="corbar" class="writebar">
+                    <div id="corleft" class="barleft" style="background-color: green; width: 0;"></div>
+                </div>
+                <div id="cortext" class="wrletxt">
+                    <h4>CORRECT</h4>
+                    <h4 id="correctNum">0</h4>
+                </div>
+            </div>
+            
+        </div>
+        <div id="writeright">
+            <div>
+                <h2 id="writegiven"></h2>
+                <div id="writenter">
+                <input type="text" id="writeInput">
+                <button id="enterWrite" onclick="checkWrite()">Enter</button>
+            </div>
+            </div>
+            <div id="rightWrongWrite">
+                <div id="compWrite">
+                <h2 id="rightornot">Correct!</h2>
+            
+                <button onclick="closeCorrWrite()" id="contButton" type="button">Continue</button>
+              </div>
+            <div id="userWrite">
+                <h3 id="userwrote">Hi</h3>
+                <h3 id="correctAns">Hi</h3>
+            </div>
+            </div>
+        </div>
+    </div>
+    
+    </div>
+    <div id="wordSearchModal">
+        <h1 style="text-align: center;">Word Search</h1>
+        <h2 id="wordSearchModalx" onclick="closeWordSearchMode()">x</h2>
+        <div id="grid" class="grid"></div>
+        <div id="words">
+            <h2>Find these words:</h2>
+            <ul id="wordList"></ul>
+        </div>
+        <div id="congratsModal" class="searchModal">
+            <h2>Congratulations! You've found all the words!</h2>
+            <br>
+            <h4>Refresh Tab to restart the Game</h4>
+        </div>
+    </div>
+    
+    <h2>Terms & Definitions</h2>
+    <table style="display: block;" id="cardTable">
+        <tbody id="tbody">
+
+        </tbody>
+    </table>
+</div>
+    <script defer src="script.js" ></script>
+    <script src="createset.js"></script>
+    <script src="write.js"></script>
+    <script src="wordSearch.js"></script>
+</body>
+
+</html>
