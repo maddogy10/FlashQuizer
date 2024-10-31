@@ -28,8 +28,7 @@ let corrBar;
 let remBarCover = document.getElementById("remleft")
 let incBarCover = document.getElementById("incleft")
 let corrBarCover = document.getElementById("corleft")
-//let wrongTermArr = []
-//let wrongTermDef = []
+
 // number of term/def for write order
 let ogTermArr = []
 let ogDefArr = []
@@ -48,23 +47,7 @@ function termWrite() {
   corrBar = 0;
   incBar = 0;
   //do the bars
- /*
-  let termArrNum = []
- let randTermArr = []
- for (i = 0; i < numOfTerms; i++) {
-  randTermArr[i] = i
- }
- 
-  for(j = 0; j < retrieved.length; j++ ) {
-   /* 
-  console.log(randTermArr)
-  if (randTermArr.includes(randTerm)!=true) {
-    let i = 0
-    termArrNum[i] = retrieved[randTerm]
-    i++
-  }*/
-  // while i < retrieved.length
- 
+  
   for(i =0; i < retrieved.length; i++) {
     termArr[i] = i;
     defArr[i] = i;
@@ -76,18 +59,15 @@ function termWrite() {
   
   
   let randTerm = Math.floor(Math.random()*retrieved.length)
-  //  randTermArr[j] = randTerm
     if (termArr.includes(randTerm)) {
       termArrNum[j] = retrieved[randTerm]
       defArrNum[j] = gotDefs[randTerm]
-     // console.log(termArr)
-     // console.log(termArrNum)
-     
+    
      for (i=0; i < termArr.length; i++) {
       if(termArr[i] == randTerm) {
         termArr.splice(i, 1)
         console.log("I spliced " + i)
-     //   console.log(termArr)
+    
       }
      }
       j++
