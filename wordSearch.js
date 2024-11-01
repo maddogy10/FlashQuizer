@@ -17,11 +17,12 @@ wordSearchButton.addEventListener('click', function () {
 function runWordSearch() {
 
     let i = 0;
-    retrieved.forEach((e) => {
-        retrieved[i] = e.toUpperCase()
+    let retrievedBackUp = retrieved
+    retrievedBackUp.forEach((e) => {
+        retrievedBackUp[i] = e.toUpperCase()
         i++;
     })
-    const allWords = retrieved;
+    const allWords = retrievedBackUp;
     console.log(retrieved)
 
 while (selectedWords.length < 5) {
